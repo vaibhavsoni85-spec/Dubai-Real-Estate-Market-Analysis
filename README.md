@@ -10,7 +10,7 @@ The dataset contains realistically calibrated, modelled listing-level records wi
 
 ## Dashboard preview
 
-!\[Market Overview dashboard](Screenshots/01\_Market\_Overview.png)
+![Market Overview dashboard](Screenshots/01_Market_Overview.png)
 
 ## Business questions
 
@@ -21,67 +21,67 @@ The dataset contains realistically calibrated, modelled listing-level records wi
 
 ## Report pages
 
-|Page|Analytical focus|Examples|
-|-|-|-|
-|Market Overview|Overall market direction|Price and rent trends, financing rates, annual listing activity|
-|Off Plan vs Secondary|Primary-versus-resale pricing|Price-per-square-foot premium, listing share, community and property-type comparison|
-|Rental Market|Rental performance|Rent levels, annual rent per sq ft, furnishing, community comparison and year-over-year movement|
-|Investment \& Yield|Investment screening|Estimated gross yield, price-versus-rent positioning and community opportunities|
-|Location \& Property Analysis|Secondary-market property and accessibility|Property price, metro travel time, bedrooms, size and key price drivers|
+| Page | Analytical focus | Examples |
+| --- | --- | --- |
+| Market Overview | Overall market direction | Price and rent trends, financing rates, annual listing activity |
+| Off Plan vs Secondary | Primary-versus-resale pricing | Price-per-square-foot premium, listing share, community and property-type comparison |
+| Rental Market | Rental performance | Rent levels, annual rent per sq ft, furnishing, community comparison and year-over-year movement |
+| Investment & Yield | Investment screening | Estimated gross yield, price-versus-rent positioning and community opportunities |
+| Location & Property Analysis | Secondary-market property and accessibility | Property price, metro travel time, bedrooms, size and key price drivers |
 
 ## Key findings
 
-* Average off-plan property price is approximately **$1.70M**, compared with **$1.01M** for secondary-market properties.
-* Average annual rent is approximately **$83.69K**.
-* The portfolio-level estimated gross rental yield is approximately **8.25%**.
-* Off-plan price per sq ft remains above the secondary-market benchmark, supporting the premium analysis.
-* Luxury communities do not automatically provide the highest estimated yields; entry price and rental income must be evaluated together.
-* Average property price increases materially with bedroom count, while property type and size further explain market segmentation.
-* Accessibility varies across communities; metro travel time and distance from Burj Khalifa provide an additional location lens.
-* Data for 2026 is available only through April and must be interpreted as partial-year or year-to-date information.
+- Average off-plan property price is approximately **$1.70M**, compared with **$1.01M** for secondary-market properties.
+- Average annual rent is approximately **$83.69K**.
+- The portfolio-level estimated gross rental yield is approximately **8.25%**.
+- Off-plan price per sq ft remains above the secondary-market benchmark, supporting the premium analysis.
+- Luxury communities do not automatically provide the highest estimated yields; entry price and rental income must be evaluated together.
+- Average property price increases materially with bedroom count, while property type and size further explain market segmentation.
+- Accessibility varies across communities; metro travel time and distance from Burj Khalifa provide an additional location lens.
+- Data for 2026 is available only through April and must be interpreted as partial-year or year-to-date information.
 
 ## Data model
 
 ### Fact tables
 
-* `Off Plan` — 12,000 listing-level records
-* `Rentals` — 25,000 listing-level records
-* `Secondary Sales` — 50,000 listing-level records
-* `Area Prices Monthly` — 6,384 community-by-month records
+- `Off Plan` — 12,000 listing-level records
+- `Rentals` — 25,000 listing-level records
+- `Secondary Sales` — 50,000 listing-level records
+- `Area Prices Monthly` — 6,384 community-by-month records
 
 ### Conformed dimensions
 
-* `Dim Date`
-* `Dim Community`
-* `Dim Project`
-* `Dim Metro Station`
-* `Dim Bedrooms`
+- `Dim Date`
+- `Dim Community`
+- `Dim Project`
+- `Dim Metro Station`
+- `Dim Bedrooms`
 
 All 14 relationships are active, many-to-one, and single-direction. The model contains no fact-to-fact relationships. `Dim Bedrooms` provides one shared bedroom slicer for Rentals and Secondary Sales.
 
 ## Analytical approach
 
-* Full-dataset profiling and data-quality review
-* Power Query cleaning, type correction and naming standardisation
-* Star-schema-oriented dimensional modelling
-* Reusable DAX measures and time-intelligence calculations
-* Same-period prior-year comparisons for partial 2026 data
-* Interactive slicers, tooltips, conditional formatting and decomposition analysis
-* Semantic-model clean-up by hiding redundant technical fields and removing temporary measures
+- Full-dataset profiling and data-quality review
+- Power Query cleaning, type correction and naming standardisation
+- Star-schema-oriented dimensional modelling
+- Reusable DAX measures and time-intelligence calculations
+- Same-period prior-year comparisons for partial 2026 data
+- Interactive slicers, tooltips, conditional formatting and decomposition analysis
+- Semantic-model clean-up by hiding redundant technical fields and removing temporary measures
 
 ## Important metric definitions
 
-* **Off-plan price-per-sq-ft premium:** compares average off-plan price per sq ft with the secondary-market benchmark under the current filter context.
-* **Estimated gross rental yield:** average annual rent divided by average secondary-market price under the same filter context.
-* **Rental listing records:** number of rows in the Rentals table under the active filters; it does not represent confirmed unique physical properties.
+- **Off-plan price-per-sq-ft premium:** compares average off-plan price per sq ft with the secondary-market benchmark under the current filter context.
+- **Estimated gross rental yield:** average annual rent divided by average secondary-market price under the same filter context.
+- **Rental listing records:** number of rows in the Rentals table under the active filters; it does not represent confirmed unique physical properties.
 
 ## Limitations
 
-* The source contains synthetic/modelled listing records and is intended for analytical demonstration.
-* Estimated gross yield compares aggregated rental and secondary-market averages; properties are not matched at unit level.
-* 2026 data is partial through April.
-* Financing-rate analysis uses the common period from April 2020 through March 2024.
-* Secondary Sales floor-related fields contain approximately 36% missing values.
+- The source contains synthetic/modelled listing records and is intended for analytical demonstration.
+- Estimated gross yield compares aggregated rental and secondary-market averages; properties are not matched at unit level.
+- 2026 data is partial through April.
+- Financing-rate analysis uses the common period from April 2020 through March 2024.
+- Secondary Sales floor-related fields contain approximately 36% missing values.
 
 ## Tools and skills demonstrated
 
@@ -90,35 +90,35 @@ All 14 relationships are active, many-to-one, and single-direction. The model co
 ## Repository contents
 
 ```text
-Dubai\_Real\_Estate\_Market\_Analysis/
+Dubai_Real_Estate_Market_Analysis/
 ├── README.md
 ├── LICENSE
+├── .gitignore
 ├── Documentation/
-│   ├── Dubai\_Real\_Estate\_PowerBI\_Case\_Study.docx
-│   └── Dubai\_Real\_Estate\_PowerBI\_Case\_Study.pdf
+│   ├── Dubai_Real_Estate_PowerBI_Case_Study.docx
+│   └── Dubai_Real_Estate_PowerBI_Case_Study.pdf
 ├── DAX-Measures/
-│   └── DAX\_Measures.md
+│   └── DAX_Measures.md
 ├── Data-Dictionary/
-│   └── Data\_Dictionary.md
+│   └── Data_Dictionary.md
 ├── Dataset/
-│   └── Data\_Source.md
+│   └── Data_Source.md
 ├── Screenshots/
-│   ├── 01\_Market\_Overview.png
-│   ├── 02\_Off\_Plan\_vs\_Secondary.png
-│   ├── 03\_Rental\_Market.png
-│   ├── 04\_Investment\_and\_Yield.png
-│   └── 05\_Location\_and\_Property\_Analysis.png
+│   ├── 01_Market_Overview.png
+│   ├── 02_Off_Plan_vs_Secondary.png
+│   ├── 03_Rental_Market.png
+│   ├── 04_Investment_and_Yield.png
+│   └── 05_Location_and_Property_Analysis.png
 └── Power-BI-Report/
-    └── Dubai\_Real\_Estate\_Market\_Analysis.pbix
+    └── Dubai_Real_Estate_Market_Analysis.pbix
 ```
 
 The final interactive report is included in the `Power-BI-Report` folder. Open it with Power BI Desktop to use the complete filters, tooltips and drill interactions.
 
 ## Data source
 
-Dataset: **Dubai Real Estate: Sales, Off-Plan \& Rentals (2020–2026)** by Kaggle user **sergionefedov**. See [Data\_Source.md](Dataset/Data_Source.md) for attribution, licence and usage notes.
+Dataset: **Dubai Real Estate: Sales, Off-Plan & Rentals (2020–2026)** by Kaggle user **sergionefedov**. See [Data_Source.md](Dataset/Data_Source.md) for attribution, licence and usage notes.
 
 ## Licence
 
-The project code, DAX measures and original documentation are released under the [MIT License](LICENSE). The source dataset remains subject to its original licence; see [Data\_Source.md](Dataset/Data_Source.md) for details.
-
+The project code, DAX measures and original documentation are released under the [MIT License](LICENSE). The source dataset remains subject to its original licence; see [Data_Source.md](Dataset/Data_Source.md) for details.
