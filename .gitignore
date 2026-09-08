@@ -1,0 +1,13 @@
+# Power BI temporary and backup files
+*.tmp
+*.bak
+*.zip
+*Backup*.pbix
+*backup*.pbix
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Local working files
+WORKING_CHECKLIST.md
