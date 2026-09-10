@@ -119,6 +119,12 @@ The final interactive report is included in the `Power-BI-Report` folder. Open i
 
 Dataset: **Dubai Real Estate: Sales, Off-Plan & Rentals (2020–2026)** by Kaggle user **sergionefedov**. See [Data_Source.md](Dataset/Data_Source.md) for attribution, licence and usage notes.
 
+
 ## Licence
 
 The project code, DAX measures and original documentation are released under the [MIT License](LICENSE). The source dataset remains subject to its original licence; see [Data_Source.md](Dataset/Data_Source.md) for details.
+
+
+## Author
+
+Vaibhav Soni
