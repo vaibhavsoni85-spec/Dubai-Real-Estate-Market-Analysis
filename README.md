@@ -8,9 +8,29 @@ The solution combines five source datasets into a star-schema-oriented semantic 
 
 The dataset contains realistically calibrated, modelled listing-level records with real geographic and market anchors. Results demonstrate analytical and Power BI capabilities and should not be interpreted as official Dubai Land Department transaction statistics.
 
-## Dashboard preview
+## Dashboard pages
 
-![Market Overview dashboard](Screenshots/01_Market_Overview.png)
+### 1. Market Overview
+
+![Market Overview](Screenshots/01_Market_Overview.png)
+
+### 2. Off Plan vs Secondary
+
+![Off Plan vs Secondary](Screenshots/02_Off_Plan_vs_Secondary.png)
+
+### 3. Rental Market
+
+![Rental Market](Screenshots/03_Rental_Market.png)
+
+### 4. Investment and Yield
+
+![Investment and Yield](Screenshots/04_Investment_and_Yield.png)
+
+### 5. Location and Property Analysis
+
+![Location and Property Analysis](Screenshots/05_Location_and_Property_Analysis.png)
+
+
 
 ## Business questions
 
